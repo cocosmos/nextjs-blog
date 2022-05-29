@@ -12,5 +12,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.end("Server is working !");
+});
+app.get("/api", (req, res) => {
+  res.end("Go to '/api/posts'");
+});
+
 // Lancement du serveur Web
-app.listen(PORT, () => console.log(`Serveur lancé sur le port ${PORT}`));
+app.listen(PORT, () => console.log(`Servor launch on ${PORT}`));
