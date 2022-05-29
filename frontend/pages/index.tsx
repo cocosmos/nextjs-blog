@@ -3,7 +3,7 @@ import { PostType } from "../interface/type";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/posts");
+  const res = await fetch(`${process.env.API_LINK}posts`);
   const posts = await res.json();
 
   return {
